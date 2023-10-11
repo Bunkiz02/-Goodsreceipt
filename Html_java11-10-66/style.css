@@ -1,3 +1,6 @@
+*{
+    font-family: 'Sarabun', sans-serif;
+}
 body {
     background: #dfe6e9;
 }
@@ -177,6 +180,12 @@ text-align: right;
 }
 .xr{
     padding-left: 60px;
+}
+.form-check{
+    padding-left: 30px;
+}
+.inputext{
+    padding-left: 10px;
 }
 
 
