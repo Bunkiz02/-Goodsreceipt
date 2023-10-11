@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<!-- <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css"> -->
+	<!-- <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script> -->
+	<!-- <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+		crossorigin="anonymous"></script>
+	<script src="https://code.jquery.com/jquery-3.7.0.js"
+		integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script>
+	<script src="dynamic.js"></script>
+	<link rel="stylesheet" href="style.css">
+	<script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
+</head>
+
+<body>
+	<div class="paper-shadow">
+		<div class="Title-Top">
+			<h2>ใบเบิกวัสดุ</h2>
+		</div>
+		<div class="invoice-box">
+			<table cellpadding="0" cellspacing="0">
+				<tr class="top">
+					<td colspan="2">
+						<table>
+							<tr>
+								<td>
+									<b class="original">ใบเบิกที่</b> .............../.................<br />
+									<br />
+									<b class="original">เรื่อง</b> ขออนุมัติเบิกวัสดุของใช้สำนักงาน<br />
+									<br />
+									<b class="original">เรื่อง</b> คณบดี<br />
+								</td>
+							</tr>
+						</table>
+					</td>
+					<td colspan="2">
+						<table>
+							<tr>
+								<td class="day-mount-year">
+									<b>วันที่ </b>...................
+									<b>เดือน</b>...................
+									<b>พ.ศ.</b> ...................<br />
+								</td>
+							</tr>
+						</table>
+					</td>
+				</tr>
+			</table>
+			<div class="day-mount-year">
+				<b>ตามที่</b>...............................................................................................
+				<b>สาขาวิชา</b>.............................................................................................<br />
+			</div>
+			<br />
+			<div class="invoice-box">
+				<p>มีความประสงค์ขอเบิกวัสดุสำนักงานของคณะวิทยาศาสตร์เเละเทคโนโลยีเพื่อใช้ราชการ ดังต่อไปนี้ .-</p>
+			</div>
+			<br />
+
+		</div>
+		<div class="container">
+			<div class="row clearfix">
+				<div class="col-md-12 table-responsive">
+					<table class="table table-bordered table-hover table-sortable" id="tab_logic">
+						<thead>
+							<tr>
+								<th class="text-center">
+									ที่
+								</th>
+								<th class="text-center">
+									รายการ
+								</th>
+								<th class="text-center">
+									จำนวนที่เบิก
+								</th>
+								<th class="text-center">
+									จำนวนที่รับ
+								</th>
+								<th class="text-center">
+									หมายเหตุ
+								</th>
+								<th class="text-center"
+									style="border-top: 1px solid #ffffff; border-right: 1px solid #ffffff;">
+								</th>
+							</tr>
+						</thead>
+
+						<tbody>
+
+							<tr id='addr0' data-id="0" class="hidden">
+								<td data-name="number">
+									<input type="intiger" name='num0' placeholder='กรุณากรอกข้อมูล'
+										class="form-control" />
+								</td>
+
+								<td data-name="list">
+									<input type="text" name='list0' placeholder='กรุณากรอกข้อมูล'
+										class="form-control" />
+								</td>
+								<td data-name="count1">
+									<input type="text" name='count0' placeholder='กรุณากรอกข้อมูล'
+										class="form-control" />
+								</td>
+								<td data-name="count2">
+									<input type="text" name='count2_0' placeholder='กรุณากรอกข้อมูล'
+										class="form-control" />
+								</td>
+								<td data-name="Des">
+									<textarea name="desc0" placeholder="กรุณากรอกข้อมูล"
+										class="form-control"></textarea>
+								</td>
+								<td data-name="del">
+									<button name="del0"
+										class='btn btn-danger glyphicon glyphicon-remove row-remove'><span
+											aria-hidden="true">×</span></button>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+			<a id="add_row" class="btn btn-primary float-right">เพิ่มเเถว</a>
+		</div>
+		<br />
+
+		<div class="invoice-box">
+			<table cellpadding="0" cellspacing="0">
+				<tr class="top">
+					<td colspan="2">
+						<table>
+							<tr>
+								<td>
+									<b class="original">(ลงชื่อ)</b>
+									.........................................................<b>ผู้เบิก</b><br />
+									<br />
+									<b class="original">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+										(</b>............................................................<b
+										class="original">)</b><br />
+									<br />
+								</td>
+							</tr>
+						</table>
+					</td>
+					<td colspan="2">
+						<table>
+							<tr>
+								<td class="invoicet">
+									<b class="original">
+										&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+										&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+										&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+										(ลงชื่อ)</b>.........................................................<b>ประธานหลักสูตร</b><br />
+									<br />
+									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+									<b>(</b>............................................................<b>)</b>
+									<br />
+
+
+								</td>
+							</tr>
+						</table>
+					</td>
+				</tr>
+			</table>
+			--------------------------------------------------------------------------------------------------------------------------------------------------
+
+			<div class="container">
+				<table cellpadding="0" cellspacing="0">
+					<tr class="top">
+						<td>
+							<table>
+								<tr>
+									<td>
+										<div class="div2 col-sm-10">
+											<br />
+											&nbsp;&nbsp;<b>[ ] อนุญาตให้เบิกได้</b><br />
+											<br />
+											&nbsp;&nbsp;<b>[ ]
+												ไม่อนุญาตเนื่องจาก</b>.....................................................<br />
+											<br />
+											.....................................................................................................
+											<br />
+											<br />
+											<b
+												class="xx">(ลงชื่อ)</b>...................................<b>หัวหน้าพัสดุ</b><br />
+											<br />
+											<b class="xr">
+												(</b>............................................................<b>)</b><br />
+											<br />
+											<br />
+										</div>
+									</td>
+								</tr>
+
+							</table>
+
+						</td>
+						<td>
+							<table>
+								<tr>
+									<td>
+										<div class="div3 col-sm-10">
+											<br />
+											&nbsp;&nbsp;<b>ครบถ้วนถูกต้องเเล้วได้รับของครบถ้วนถูกต้องเเล้ว</b></b><br />
+											<br />
+											<b
+												class="xx">(ลงชื่อ)</b>...................................<b>ผู้รับของ</b><br />
+											<br />
+											<b class="xr">
+												(</b>............................................................<b>)</b><br />
+											<hr>
+
+											<b
+												class="xx">(ลงชื่อ)</b>...................................<b>ผู้จ่าย</b><br />
+											<br />
+											<b class="xr">
+												(</b>............................................................<b>)</b><br />
+											<br />
+											<br />
+										</div>
+									</td>
+								</tr>
+							</table>
+						</td>
+					</tr>
+				</table>
+			</div>
+
+
+
+
+
+		</div>
+
+
+
+	</div>
+	</div>
+
+
+
+
+</body>
+
+</html>
